@@ -1,0 +1,13 @@
+let n = +prompt("1~9까지 숫자중 하나를 입력하세요");
+
+function multiplicationTable(n) {
+  let list = [];
+
+  for (let i = 0; i < 9; i++) {
+    list[i] = n * (i + 1);
+  }
+
+  console.log("출력", ...list);
+}
+
+multiplicationTable(n);
