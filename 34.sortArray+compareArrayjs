@@ -1,0 +1,25 @@
+let height = prompt("키를 입력하세요.");
+let result;
+result = height.split(" ");
+let conciseHeights = result.slice();
+
+conciseHeights.sort(function (a, b) {
+  return a - b;
+});
+
+function isArrayEqual(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return "NO";
+  }
+  let isEqual = "YES";
+  arr1.forEach((item, index) => {
+    if (item !== arr2[index]) {
+      isEqual = "NO";
+    }
+  });
+  return isEqual;
+}
+
+console.log(result);
+console.log(conciseHeights);
+console.log("출력 : ", isArrayEqual(result, conciseHeights));
