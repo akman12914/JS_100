@@ -7,9 +7,10 @@ function bubble(arr) {
   console.log(result);
 
   for (let i = 0; i < result.length - 1; i++) {
-    for (let j = 0; j < result.length - i; j++) {
-      console.log("result[j]:" + result[j]);
-      console.log("result[j+1]:" + result[j + 1]);
+    console.log("i:" + i);
+    for (let j = 0; j < result.length - 1 - i; j++) {
+      console.log(`result[${j}]` + result[j]);
+      console.log(`result[${j + 1}]:` + result[j + 1]);
 
       if (result[j] > result[j + 1]) {
         let i = 0;
@@ -17,8 +18,11 @@ function bubble(arr) {
         result[j] = result[j + 1];
         result[j + 1] = i;
       }
-      console.log("result[j]:" + result[j]);
-      console.log("result[j+1]:" + result[j + 1]);
+
+      console.log(`result[${j}]` + result[j]);
+      console.log(`result[${j + 1}]:` + result[j + 1]);
+
+      console.log("-------------");
     }
   }
   return result;
